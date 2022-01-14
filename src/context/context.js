@@ -15,11 +15,9 @@ const initialState = {
     name: "",
     username: "",
     email: "",
-    address: {
-      city: "",
-      suite: "",
-      street: "",
-    },
+    city: "",
+    suite: "",
+    street: "",
   },
 };
 const url = "https://jsonplaceholder.typicode.com/users";
