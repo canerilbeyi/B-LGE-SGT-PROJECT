@@ -13,7 +13,6 @@ const Modal = () => {
     isAdding,
     specificID,
   } = useGlobalContext();
-  console.log(person);
   return (
     <div
       className={`${
