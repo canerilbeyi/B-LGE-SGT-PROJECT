@@ -23,7 +23,6 @@ const initialState = {
 const url = "https://jsonplaceholder.typicode.com/users";
 
 const AppProvider = ({ children }) => {
-  console.log(initialState.newData);
   let { loading, users } = useFetch(url);
   const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
@@ -31,8 +30,6 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "INITIAL_FETCH", payload: users });
   }, [loading, users]);
   const openModalForEditing = (...rest) => {
-    console.log(rest);
-
     dispatch({ type: "OPEN_MODAL_FOR_EDITING", payload: { ...rest } });
   };
   const openModalForAdding = () => {

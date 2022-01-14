@@ -23,7 +23,6 @@ const reducer = (state, action) => {
       5: suite,
       6: city,
     } = action.payload;
-    console.log(action.payload);
     return {
       ...state,
       isModalOpen: true,
@@ -109,7 +108,6 @@ const reducer = (state, action) => {
     }
   }
   if (action.type === "EDIT_PERSON") {
-    console.log(state.people);
     if (
       state.person.name &&
       state.person.username &&
